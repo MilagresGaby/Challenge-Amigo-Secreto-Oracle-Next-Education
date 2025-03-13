@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     background-color: #0b3d1e;
     color: #fff;
     text-align: center;
@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -31,7 +32,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Espaço entre o input e o botão */
+    gap: 10px;
 }
 
 input {
@@ -42,9 +43,9 @@ input {
 }
 
 button {
-    padding: 15px 20px; /* Aumentei o padding para deixar os botões maiores */
+    padding: 15px 20px;
     border: none;
-    border-radius: 50%; /* Torna os botões circulares */
+    border-radius: 50%;
     cursor: pointer;
     font-weight: bold;
     color: white;
@@ -56,7 +57,7 @@ button {
 }
 
 #adicionarBtn:hover {
-    background-color: #218838; /* Verde mais escuro ao passar o mouse */
+    background-color: #218838; /* Verde mais escuro */
 }
 
 #sortearBtn {
@@ -64,7 +65,7 @@ button {
 }
 
 #sortearBtn:hover {
-    background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+    background-color: #c82333; /* Vermelho mais escuro */
 }
 
 .nomes-section {
@@ -92,4 +93,27 @@ li {
     font-size: 20px;
     font-weight: bold;
     color: #ffd700;
+}
+
+/* Efeito dos floquinhos de neve */
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear forwards, sway ease-in-out infinite alternate;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes sway {
+    0% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
 }
